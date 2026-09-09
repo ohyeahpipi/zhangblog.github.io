@@ -93,8 +93,8 @@
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2026-09-09T10:44:38.884Z">
-<meta property="article:modified_time" content="2026-09-09T10:44:38.884Z">
+<meta property="article:published_time" content="2026-09-09T10:47:04.218Z">
+<meta property="article:modified_time" content="2026-09-09T10:47:04.218Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -488,44 +488,23 @@
 		
 
 		<style>
-/* 强制撑满宽度，提升优先级覆盖主题样式 */
 .masonry {
-  column-count: 3 !important;
+  column-count: 3;
   column-gap: 15px;
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 10px;
 }
-
-/* 响应式适配：平板2列，手机1列 */
-@media (max-width: 900px) {
-  .masonry {
-    column-count: 2 !important;
-  }
-}
-@media (max-width: 600px) {
-  .masonry {
-    column-count: 1 !important;
-  }
-}
-
 .masonry-item {
-  break-inside: avoid !important;
+  break-inside: avoid;
   margin-bottom: 15px;
-  /* 兼容全浏览器的防截断属性 */
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
 }
-
-/* 适配主题自动给图片套的fancybox链接 */
-.masonry-item img,
-.masonry-item a img {
+.masonry-item img {
   width: 100%;
   border-radius: 8px;
   display: block;
 }
 </style>
 
-<div class="masonry">
+<div class="masonry" style="object-fit: cover;">
   <div class="masonry-item"><img  
                      lazyload
                      src="/images/loading.svg"
@@ -538,6 +517,13 @@
                      data-src="https://pub-46d754cfa01b43b6ac05120f153d9292.r2.dev/02.jpg"
                       alt=""
                 ></div>
+  <div class="masonry-item"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pub-46d754cfa01b43b6ac05120f153d9292.r2.dev/02.jpg"
+                      alt=""
+                ></div>
+
   <!-- 
   <div class="masonry-item"><img src="" alt=""></div>
   <div class="masonry-item"><img  
@@ -554,7 +540,6 @@
                 ></div>
   -->
 </div>
-
 	</div>
 
 	<div class="page-template-comments">
